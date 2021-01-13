@@ -2,6 +2,7 @@
     Copyright (C) 2018 Fernando Porrino Serrano.
     This software it's under the terms of the GNU Affero General Public License version 3.
     Please, refer to (https://github.com/FherStk/DocumentPlagiarismChecker/blob/master/LICENSE) for further licensing details.
+    jajaja k guay
  */
  
 using System;
@@ -16,6 +17,7 @@ namespace DocumentPlagiarismChecker.Comparators.DocumentWordCounter
     /// The Word Counter Comparator reads a pair of files and counts how many words and how many times appear on each file, and then calculates
     /// how many of those appearences matches between documents. So, two documents with the same amount of the same words can be a copy with
     /// a high level of provability.
+    /// leche frita
     /// </summary>
     /// <typeparam name="Document"></typeparam>
     internal class Comparator: Core.BaseComparator<Document>
@@ -32,6 +34,7 @@ namespace DocumentPlagiarismChecker.Comparators.DocumentWordCounter
         
         /// <summary>
         /// Counts how many words and how many times appears within each document, and checks the matching percentage.
+        /// jax top
         /// </summary>
         /// <returns>The matching's results.</returns>
         public override ComparatorMatchingScore Run(){
@@ -65,7 +68,8 @@ namespace DocumentPlagiarismChecker.Comparators.DocumentWordCounter
             cr.DetailsCaption = new string[] { "Word", "Left count", "Right count", "Match" };
             cr.DetailsFormat = new string[]{"{0}", "{0}", "{0}", "{0:P2}"};
 
-            //Calculate the matching for each individual word.            
+            //Calculate the matching for each individual word.  
+            // jajaj          
             foreach(string word in counter.Select(x => x.Key)){                
                 int left = counter[word][0];
                 int right = counter[word][1];                
